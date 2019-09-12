@@ -3,7 +3,6 @@ import { BrowserRouter as Router , Route , Link } from 'react-router-dom'
 import componentA from '../views/a'
 import componentB from '../views/b'
 import componentC from '../views/c'
-
  
 class AppRouter extends Component{
     render(){

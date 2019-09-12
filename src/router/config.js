@@ -1,19 +1,27 @@
 const routes = [
     {
         path:'/',
-        component:'component/app',
-        routes:[
-            {
-                path:'/asd',
-                component:'component/topics',
-                routes:[
-                    {
-                        path:'/asd/login',
-                        component:'component/home'
-                    }
-                ]
-            }
-        ]
+        name:'a-component',
+        component:'view/a',
+        meta:{
+            auth:true
+        }
+    },
+    {
+        path:'/b',
+        name:'b-component',
+        component:'view/b',
+        meta:{
+            auth:true
+        }
+    },
+    {
+        path:'/c',
+        name:'c-component',
+        component:'view/c',
+        meta:{
+            auth:false
+        }
     }
 ]
 
