@@ -1,16 +1,38 @@
 import React , { Component ,Fragment } from 'react' 
-import { BrowserRouter as Router , Route , Link } from 'react-router-dom'
-import componentA from '../views/a'
-import componentB from '../views/b'
-import componentC from '../views/c'
- 
+import { BrowserRouter as Router , Route , Link , Switch} from 'react-router-dom'
+// import componentA from '../views/a'
+// import componentB from '../views/b'
+// import componentC from '../views/c'
+// 404页面
+import NotFound from '../views/404'
+
+import routes from  './config'
+
+
+
+
 class AppRouter extends Component{
     render(){
         return (
             <Router>
-                <Route path = "/a" component = { componentA }  />
-                <Route path = "/b" component = { componentB }  />
-                <Route path = "/c" component = { componentC }  />
+                {/* <Switch> */}
+                    {/* {
+                        routes.map((item,index)=>{
+                            return (
+                                <Fragment key="index">
+                                    <Link to={item.path}>
+                                        {item.name}
+                                    </Link>
+
+                                    <Route exact path = {item.path} component = {NotFound} />
+                                </Fragment>
+                            )
+                        })
+                    } */}
+
+                    {/* <Route component = {NotFound} /> */}
+                {/* </Switch> */}
+                <Route component = {NotFound} />
             </Router>
         )   
     }
