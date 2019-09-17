@@ -1,4 +1,7 @@
 import React , { Component } from 'react'
+import { Button } from 'antd'
+import 'antd/es/style/index.css'
+
 
 class B extends Component{
     constructor(props){
@@ -7,8 +10,15 @@ class B extends Component{
     }
     render(){
         return (
-            <div>B</div>
+            <div>
+                B
+                <Button onClick={this.logout}>退出登录</Button>
+            </div>
         )
+    }
+    logout = ()=>{
+        localStorage.token = ""
+        this.props.history.push('/')
     }
 }
 

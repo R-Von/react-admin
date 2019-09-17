@@ -2,6 +2,7 @@ import ComponentA from '../views/a'
 import ComponentB from '../views/b'
 import ComponentC from '../views/c'
 import Login from '../views/user/login'
+import Layout from '../components/layouts/Layout'
 
 
 const routes = [
@@ -9,9 +10,7 @@ const routes = [
         path:'/',
         name:'index',
         component:ComponentA,
-        // meta:{
-            auth:true
-        // }
+        auth:true
     },
     {
         path:'/login',
@@ -19,28 +18,27 @@ const routes = [
         component:Login,
     },
     {
+        path:'/Layout',
+        name:'Layout',
+        component:Layout,
+    },
+    {
         path:'/a',
         name:'a-component',
         component:ComponentA,
-        // meta:{
-            auth:false
-        // }
+        auth:false
     },
     {
         path:'/b',
         name:'b-component',
         component:ComponentB,
-        // meta:{
-            auth:true
-        // }
+        auth:true
     },
     {
         path:'/c',
         name:'c-component',
         component:ComponentC,
-        // meta:{
-            auth:false
-        // }
+        auth:false
     }
 ]
 
