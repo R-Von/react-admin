@@ -24,8 +24,8 @@
 // }
 
 // export default App;
-import React , { Component } from 'react'
-import { BrowserRouter as Router , Link , Route , Switch} from 'react-router-dom'
+import React from 'react'
+import { BrowserRouter as Router , Route , Switch } from 'react-router-dom'
 
 // 组件
 import Login from './views/user/login'
@@ -39,15 +39,17 @@ import './App.css';
 function App(){
   return (
     <Router basename="/admin">
-      <Switch>
-        
-        <Route path="/login" component={ Login } exact />
+      <div className='entryWrap'>
+        <Switch>
+          
+          <Route path="/login" component={ Login } exact />
 
-        <PrivateRoute path="/" component={ Index } />
+          <PrivateRoute path="/" component={ Index } />
 
-        <Route compoent={ NotFound } />
+          <Route compoent={ NotFound } />
 
-      </Switch>
+        </Switch>
+      </div>  
     </Router>
   )
 }
