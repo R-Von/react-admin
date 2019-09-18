@@ -1,5 +1,6 @@
 import React , { Component } from 'react'
 import ComponentC from './c'
+import { Route } from 'react-router-dom'
 
 
 class A extends Component{
@@ -11,7 +12,7 @@ class A extends Component{
         return (
             <div>
                 A子组件
-
+                {/* <Route path="/a/c" exact component={ComponentC} /> */}
                 {/* <ComponentC  /> */}
             </div>
         )

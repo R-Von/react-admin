@@ -14,26 +14,9 @@ import routes from  './config'
 class AppRouter extends Component{
     render(){
         return (
-            <Router>
-                {/* <Switch> */}
-                    {/* {
-                        routes.map((item,index)=>{
-                            return (
-                                <Fragment key="index">
-                                    <Link to={item.path}>
-                                        {item.name}
-                                    </Link>
-
-                                    <Route exact path = {item.path} component = {NotFound} />
-                                </Fragment>
-                            )
-                        })
-                    } */}
-
-                    {/* <Route component = {NotFound} /> */}
-                {/* </Switch> */}
-                <Route component = {NotFound} />
-            </Router>
+          <div>
+              123
+          </div>
         )   
     }
 }

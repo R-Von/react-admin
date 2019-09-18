@@ -27,7 +27,7 @@ class AppRouter extends Component{
                     {
                         routes.map((item,index)=>{
                             return (
-                               <Route key = {index} path = {item.path} exact render={props=>{
+                               <Route key = {index}  exact path = {item.path}  render={props=>{
                                 //    console.log(props)
                                     return item.auth?(
                                         localStorage.token? <item.component  {...props} />: <Redirect to={{
@@ -41,8 +41,8 @@ class AppRouter extends Component{
                             )
                         })
                     }
-                    <Route component = {NotFound} />
-                </Switch>
+                        <Route component = {NotFound} />
+                    </Switch>
                 </div>    
             </Router>
         )   

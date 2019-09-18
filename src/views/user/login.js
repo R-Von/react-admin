@@ -1,33 +1,15 @@
 import React , { Component } from 'react'
-import { Button } from 'antd'
-import 'antd/es/button/style/index.css'
-
+// import { Button } from 'antd'
+// import 'antd/es/button/style/index.css'
+import { Redirect } from 'react-router-dom'
+import { fakeAuth } from '../../utils/fakeAuth'
+import LoginForm from './index'
 
 class Login extends Component{
-    constructor(props){
-        super(props)
-        // var nextPath = this.props.location.state?this.props.location.state.from.pathname:'/'
-        // this.state = {
-        //     nextTo:nextPath
-        // }
-    }
     render(){
         return (
-            <div>
-                <p>Login</p>
-                <Button onClick={this.login}>Login</Button>
-            </div>
-
-
+            fakeAuth.authenticate()?(<Redirect to="/"/>):(<LoginForm />)
         )
-    }
-    login = (e)=>{
-        e.preventDefault()
-        console.log(this.props)
-        localStorage.token = 'n59sjme2dpw02'
-        var nextPath = this.props.location.state?this.props.location.state.from.pathname:'/'
-        console.log(nextPath)
-        this.props.history.push(nextPath)
     }
 }
 
