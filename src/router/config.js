@@ -2,7 +2,8 @@ import ComponentA from '../views/a'
 import ComponentB from '../views/b'
 import ComponentC from '../views/c'
 import Login from '../views/user/login'
-import Layout from '../components/layouts/Layout'
+import DataChart from '../views/datachart'
+// import Layout from '../components/layouts/Layout'
 
 
 const routes = [
@@ -18,9 +19,9 @@ const routes = [
         component:Login,
     },
     {
-        path:'/Layout',
-        name:'Layout',
-        component:Layout,
+        path:'/dataCount',
+        name:'dataCount',
+        component:DataChart,
     },
     {
         path:'/a',

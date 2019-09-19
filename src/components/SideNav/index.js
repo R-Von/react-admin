@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Layout , Menu , Icon } from 'antd'
 import Logo from '../../assets/images/logo.svg'
 
-const { Header, Content, Footer, Sider } = Layout
+const { Sider } = Layout
 const { SubMenu } = Menu
 
 
@@ -41,7 +41,7 @@ class SiderNav extends Component{
           collapsed={this.state.collapsed.toString()}
         >
           <Menu.Item key="1">
-            <Link to="/a">
+            <Link to="/dataCount">
               <Icon type="pie-chart" />
               <span className="navTitle"> 
                 数据统计
@@ -58,7 +58,7 @@ class SiderNav extends Component{
           </Menu.Item>
           <Menu.Item key="3">
             <Link to="/c">
-              <Icon type="floder" />
+              <Icon type="inbox" />
               <span className="navTitle"> 
                 Input输入组件
               </span>
