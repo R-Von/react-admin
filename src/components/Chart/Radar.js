@@ -5,13 +5,7 @@ import {
   Axis,
   Tooltip,
   Coord,
-  Label,
-  Legend,
-  View,
-  Guide,
-  Shape,
-  Facet,
-  Util,
+  Legend
 } from 'bizcharts'
 import DataSet from '@antv/data-set'
 

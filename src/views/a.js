@@ -1,6 +1,6 @@
 import React , { Component } from 'react'
-import ComponentC from './c'
-import { Route } from 'react-router-dom'
+// import ComponentC from './c'
+// import { Route } from 'react-router-dom'
 
 
 class A extends Component{

@@ -3,15 +3,7 @@ import {
   Chart,
   Geom,
   Axis,
-  Tooltip,
-  Coord,
-  Label,
-  Legend,
-  View,
-  Guide,
-  Shape,
-  Facet,
-  Util
+  Tooltip
 } from "bizcharts"
 
 class LineChart extends Component{

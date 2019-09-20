@@ -6,7 +6,6 @@ import { BrowserRouter as Router , Route , Link , Switch} from 'react-router-dom
 // 404页面
 import NotFound from '../views/404'
 
-import routes from  './config'
 
 
 

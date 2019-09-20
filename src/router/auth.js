@@ -7,7 +7,7 @@ import { BrowserRouter as Router , Route , Redirect , Switch} from 'react-router
 import NotFound from '../views/404'
 
 import Header from '../components/layouts/Header'
-import routes from  './config'
+import {defaultRouter , asyncRouter} from  './config'
 
 
 
@@ -18,7 +18,7 @@ class AppRouter extends Component{
         super(props)
     }
     render(){
-       
+       let routes = defaultRouter.concat(asyncRouter)
         return (
             <Router>
                 <div>

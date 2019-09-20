@@ -1,17 +1,9 @@
 import React , { Component } from 'react'
 import {
   Chart,
-  Geom,
-  Axis,
   Tooltip,
-  Coord,
-  Label,
   Legend,
-  View,
-  Guide,
-  Shape,
-  Facet,
-  Util
+  Facet
 } from "bizcharts"
 import DataSet from "@antv/data-set"
 
@@ -80,14 +72,14 @@ class PieChart extends Component{
       }
     ];
     const { DataView } = DataSet;
-    const cols = {
-      percent: {
-        formatter: val => {
-          return (val * 100).toFixed(2) + "%";
-        }
-      }
-    };
-    let id = 0;
+    // const cols = {
+    //   percent: {
+    //     formatter: val => {
+    //       return (val * 100).toFixed(2) + "%";
+    //     }
+    //   }
+    // };
+    // let id = 0;
     return (
       <div>
         <Chart height={400} data={data} padding={'auto'} forceFit>
