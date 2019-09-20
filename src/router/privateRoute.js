@@ -8,9 +8,6 @@ const PrivateRoute = ({component:Component,...rest})=>{
         <Route 
             rests
             render = {props =>{
-                console.log('rests',rests)
-                console.log('props',props)
-
                 document.title = rests.name?`${rests.name}--React Admin`:"React Admin"
                 return  fakeAuth.authenticate()?(rests.redirects?<Redirect to={{pathname:rests.redirects}} />:<Component {...props}/>):(
                     <Redirect to={{
