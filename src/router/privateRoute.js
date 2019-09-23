@@ -25,11 +25,11 @@ class PrivateRoute extends Component{
         )
     }
     componentWillMount(){
-        console.log('PrivateRoute WillMount OnEnter')
+        // console.log('PrivateRoute WillMount OnEnter')
         NProgress.start()
     }
     componentDidMount(){
-        console.log('PrivateRoute DidMount OnEnter')
+        // console.log('PrivateRoute DidMount OnEnter')
         NProgress.done()
     }
    
