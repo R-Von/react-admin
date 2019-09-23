@@ -47,7 +47,6 @@ class AppRouter extends Component{
             </Router>
         )   
     }
-
 }
 
 export default AppRouter
