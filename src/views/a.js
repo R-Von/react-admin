@@ -1,19 +1,25 @@
 import React , { Component } from 'react'
-// import ComponentC from './c'
-// import { Route } from 'react-router-dom'
+import Todo from './todo'
+import { observable , action , computed } from 'mobx'
+// import { observer } from 'mobx-react'
 
 
-class A extends Component{
-    constructor(props){
-        super(props)
-        console.log(this.props)
+class Store {
+    @observable timer = 0
+    @computed get doubleTimer () {
+        return this.timer * 2
     }
+    @action.bound add () {
+        this.timer ++
+    }
+}
+
+  
+class A extends Component{
     render(){
         return (
             <div>
-                A子组件
-                {/* <Route path="/a/c" exact component={ComponentC} /> */}
-                {/* <ComponentC  /> */}
+                <Todo store={new Store()} />
             </div>
         )
     }
