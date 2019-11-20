@@ -1,6 +1,7 @@
 import React , { Component } from 'react'
 // import { observable , action , computed } from 'mobx'
 import { observer } from 'mobx-react'
+import { Button } from 'antd'
 
 // class Store{
 //   @observable timer = 0
@@ -19,12 +20,15 @@ import { observer } from 'mobx-react'
 @observer
 class Todo extends Component{
   render(){
-    const { doubleTimer , add } = this.props.store
+    console.log(this.props.store)
+
+    const { doubleTimer , add , timer } = this.props.store
     return (
       <div>
         {/* TodoList */}
-        <span>{doubleTimer}</span>
-        <button onClick={()=>add()}>++</button>
+        <p>{timer}</p>
+        <p>{doubleTimer}</p>
+        <Button onClick={()=>add()}>+</Button>
       </div>
     )
   }

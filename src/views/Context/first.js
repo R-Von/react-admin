@@ -5,8 +5,10 @@ import PropTypes from 'prop-types'
 // const BatteryContext = createContext()
 // const { Provider } = BatteryContext
 
+
+
 class First extends Component{
-   // 声明Context对象属性
+  //  声明Context对象属性
    static childContextTypes = {
     propA: PropTypes.string,
     methodA: PropTypes.func
